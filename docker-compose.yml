@@ -1,0 +1,78 @@
+version: '3'
+services:
+    web:
+        image: nginx:alpine
+        volumes:
+            - "./etc/nginx/default.conf:/etc/nginx/conf.d/default.conf"
+            - "./etc/ssl:/etc/ssl"
+            - "./web:/var/www/html"
+            - "./etc/nginx/default.template.conf:/etc/nginx/conf.d/default.template"
+        ports:
+            - "8900:80"
+            # - "3000:443"
+        environment:
+            - NGINX_HOST=${NGINX_HOST}
+        command: /bin/sh -c "envsubst '$$NGINX_HOST' < /etc/nginx/conf.d/default.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
+        restart: always
+        depends_on:
+            - php
+            - mysqldb
+    php:
+        image: php:8.1.2-fpm
+        restart: always
+        volumes:
+            - "./etc/php/php.ini:/usr/local/etc/php/conf.d/php.ini"
+            - "./web:/var/www/html"
+    composer:
+        image: "composer"
+        volumes:
+            - "./web/app:/app"
+        command: install
+    myadmin:
+        image: phpmyadmin/phpmyadmin
+        container_name: phpmyadmin
+        ports:
+            - "8890:80"
+        environment:
+            # - PMA_ARBITRARY=1
+            - PMA_HOST=${MYSQL_HOST1}
+        restart: always
+        depends_on:
+            - mysqldb
+    myadmin2:
+        image: phpmyadmin/phpmyadmin
+        container_name: phpmyadmin2
+        ports:
+            - "8891:80"
+        environment:
+            # - PMA_ARBITRARY=1
+            - PMA_HOST=${MYSQL_HOST2}
+        restart: always
+        depends_on:
+            - mysqldb2
+    mysqldb:
+        image: mysql:${MYSQL_VERSION}
+        container_name: ${MYSQL_HOST1}
+        restart: always
+        env_file:
+            - ".env"
+        environment:
+            - MYSQL_DATABASE=${MYSQL_DATABASE1}
+            - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD1}
+        ports:
+            - "8990:3306"
+        volumes:
+            - "./data/db/mysql:/var/lib/mysql"
+    mysqldb2:
+        image: mysql:${MYSQL_VERSION}
+        container_name: ${MYSQL_HOST2}
+        restart: always
+        env_file:
+            - ".env"
+        environment:
+            - MYSQL_DATABASE=${MYSQL_DATABASE2}
+            - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD2}
+        ports:
+            - "8991:3306"
+        volumes:
+            - "./data/db2/mysql:/var/lib/mysql"
