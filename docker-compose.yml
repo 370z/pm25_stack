@@ -2,6 +2,7 @@ version: '3'
 services:
     web:
         image: nginx:alpine
+        container_name: ichigoz_nginx
         volumes:
             - "./etc/nginx/default.conf:/etc/nginx/conf.d/default.conf"
             - "./etc/ssl:/etc/ssl"
@@ -19,18 +20,20 @@ services:
             - mysqldb
     php:
         image: php:8.1.2-fpm
+        container_name: ichigoz_php
         restart: always
         volumes:
             - "./etc/php/php.ini:/usr/local/etc/php/conf.d/php.ini"
             - "./web:/var/www/html"
     composer:
         image: "composer"
+        container_name: ichigoz_composer
         volumes:
             - "./web/app:/app"
         command: install
     myadmin:
         image: phpmyadmin/phpmyadmin
-        container_name: phpmyadmin
+        container_name: ichigoz_phpmyadmin
         ports:
             - "8890:80"
         environment:
@@ -41,7 +44,7 @@ services:
             - mysqldb
     myadmin2:
         image: phpmyadmin/phpmyadmin
-        container_name: phpmyadmin2
+        container_name: ichigoz_phpmyadmin2
         ports:
             - "8891:80"
         environment:
