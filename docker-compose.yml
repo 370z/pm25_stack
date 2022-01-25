@@ -57,8 +57,8 @@ services:
         image: mysql:${MYSQL_VERSION}
         container_name: ${MYSQL_HOST1}
         restart: always
-        # env_file:
-        #     - ".env"
+        env_file:
+            - ".env"
         environment:
             - MYSQL_DATABASE=${MYSQL_DATABASE1}
             - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD1}
@@ -70,8 +70,8 @@ services:
         image: mysql:${MYSQL_VERSION}
         container_name: ${MYSQL_HOST2}
         restart: always
-        # env_file:
-        #     - ".env"
+        env_file:
+            - ".env"
         environment:
             - MYSQL_DATABASE=${MYSQL_DATABASE2}
             - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD2}
