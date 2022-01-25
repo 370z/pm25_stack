@@ -1,6 +1,6 @@
 version: '3'
 services:
-    web:
+    ichigoz_web:
         image: nginx:alpine
         container_name: ichigoz_nginx
         volumes:
@@ -17,20 +17,20 @@ services:
         depends_on:
             - php
             - mysqldb
-    php:
+    ichigoz_php:
         image: php:8.1.2-fpm
         container_name: ichigoz_php
         restart: always
         volumes:
             - "./mos/etc/php/php.ini:/usr/local/etc/php/conf.d/php.ini"
             - "./mos/web:/var/www/html"
-    composer:
+    ichigoz_composer:
         image: "composer"
         container_name: ichigoz_composer
         volumes:
             - "./mos/web/app:/app"
         command: install
-    myadmin:
+    ichigoz_myadmin:
         image: phpmyadmin/phpmyadmin
         container_name: ichigoz_phpmyadmin
         ports:
@@ -41,7 +41,7 @@ services:
         restart: always
         depends_on:
             - mysqldb
-    myadmin2:
+    ichigoz_myadmin2:
         image: phpmyadmin/phpmyadmin
         container_name: ichigoz_phpmyadmin2
         ports:
@@ -52,7 +52,7 @@ services:
         restart: always
         depends_on:
             - mysqldb2
-    mysqldb:
+    ichigoz_mysqldb:
         image: mysql:${MYSQL_VERSION}
         container_name: ${MYSQL_HOST1}
         restart: always
@@ -65,7 +65,7 @@ services:
             - "8990:3306"
         volumes:
             - "./mos/data/db/mysql:/var/lib/mysql"
-    mysqldb2:
+    ichigoz_mysqldb2:
         image: mysql:${MYSQL_VERSION}
         container_name: ${MYSQL_HOST2}
         restart: always
