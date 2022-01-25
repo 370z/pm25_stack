@@ -6,7 +6,7 @@ services:
         volumes:
             - "./mos/etc/nginx/default.conf:/etc/nginx/conf.d/default.conf"
             - "./mos/web:/var/www/html"
-            - "./etc/nginx/default.template.conf:/etc/nginx/conf.d/default.template"
+            - "./mos/etc/nginx/default.template.conf:/etc/nginx/conf.d/default.template"
         ports:
             - "8900:80"
             # - "3000:443"
