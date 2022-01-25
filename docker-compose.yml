@@ -15,8 +15,8 @@ services:
         command: /bin/sh -c "envsubst '$$NGINX_HOST' < /etc/nginx/conf.d/default.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
         restart: always
         depends_on:
-            - php
-            - mysqldb
+            - ichigoz_php
+            - ichigoz_mysqldb
     ichigoz_php:
         image: php:8.1.2-fpm
         container_name: ichigoz_php
@@ -40,7 +40,7 @@ services:
             - PMA_HOST=${MYSQL_HOST1}
         restart: always
         depends_on:
-            - mysqldb
+            - ichigoz_mysqldb
     ichigoz_myadmin2:
         image: phpmyadmin/phpmyadmin
         container_name: ichigoz_phpmyadmin2
@@ -51,7 +51,7 @@ services:
             - PMA_HOST=${MYSQL_HOST2}
         restart: always
         depends_on:
-            - mysqldb2
+            - ichigoz_mysqldb2
     ichigoz_mysqldb:
         image: mysql:${MYSQL_VERSION}
         container_name: ${MYSQL_HOST1}
