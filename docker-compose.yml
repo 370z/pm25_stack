@@ -22,16 +22,9 @@ services:
         image: nginx:alpine
         container_name: ichigoz_nginx_proxy
         volumes:
-            - "./etc/nginx/proxy.conf:/etc/nginx/conf.d/default.conf"
-            - "./etc/ssl:/etc/ssl"
-            - "./web:/var/www/html"
-            - "./etc/nginx/proxy.template.conf:/etc/nginx/conf.d/proxy.template"
+            - "./etc/nginx/proxy.conf:/etc/nginx/nginx.conf"
         ports:
             - "80:80"
-            # - "3000:443"
-        environment:
-            - NGINX_HOST=${NGINX_HOST}
-        command: /bin/sh -c "envsubst '$$NGINX_HOST' < /etc/nginx/conf.d/proxy.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
         restart: always
         depends_on:
             - web
