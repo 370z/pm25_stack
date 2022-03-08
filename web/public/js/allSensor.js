@@ -10,7 +10,7 @@ setInterval(() => {
       console.log(response.data);
       response.data.forEach((data) => {
         let text = document.createTextNode(
-          `${data.pm1} ${data.pm25} ${data.pm10} ${data.temp} ${data.humi} ${data.reading_time}`
+          `${data.pm1} ${data.pm25} ${data.pm10} ${data.temp} ${data.humi} ${data.reading_time} ${data.location}`
         );
         div.appendChild(text);
         document.body.appendChild(div);

@@ -5,7 +5,8 @@ let pm25 = document.querySelector(".pm25");
 let pm10 = document.querySelector(".pm10");
 let temp = document.querySelector(".temp");
 let humi = document.querySelector(".humi");
-let last_reading = document.querySelector(".last_reading");
+let last_Reading = document.querySelector(".last_Reading");
+let location1 = document.querySelector(".location1");
 setInterval(() => {
   axios
     .get(api_url)
@@ -16,7 +17,9 @@ setInterval(() => {
       pm10.innerHTML = response.data.pm10;
       temp.innerHTML = response.data.temp;
       humi.innerHTML = response.data.humi;
-      last_reading.innerHTML = response.data.last_reading;
+      last_Reading.innerHTML = response.data.last_reading;
+      location1.innerHTML = response.data.location;
+
     })
     .catch((err) => console.log(err));
 }, 5000); // 1000 =  1 วินาที
