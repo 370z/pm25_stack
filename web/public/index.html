@@ -8,44 +8,45 @@
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Sufee Admin - HTML5 Admin Template</title>
-    <meta name="description" content="Sufee Admin - HTML5 Admin Template">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="apple-touch-icon" href="apple-icon.png">
+    <title>รายงานสถานการณ์ฝุ่นจิ๋ว</title>
+
+
+
+    <!-- <link rel="apple-touch-icon" href="apple-icon.png"> -->
+    <!-- <link rel="shortcut icon" href="favicon.ico"> -->
     <link rel="shortcut icon" href="favicon.ico">
 
     <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="vendors/themify-icons/css/themify-icons.css">
     <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css">
-    <link rel="stylesheet" href="vendors/selectFX/css/cs-skin-elastic.css">
-    <link rel="stylesheet" href="vendors/jqvmap/dist/jqvmap.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+    <!-- <link rel="stylesheet" href="vendors/selectFX/css/cs-skin-elastic.css"> -->
+    <!-- <link rel="stylesheet" href="vendors/jqvmap/dist/jqvmap.min.css"> -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <style>
-        .responsive{
-            height: 100%;
+        .respovsive {
             width: 100%;
+            height: 100%;
         }
 
-        .navbar{
+        .navbar {
             margin-bottom: 30px;
         }
 
-        .breadcrumbs h1{
+        .breadcrumbs h1 {
             margin-left: 1rem;
         }
 
-        .boxi{
+        .boxi {
             margin-left: 0.3rem;
         }
-        
     </style>
 </head>
 
@@ -53,286 +54,145 @@
 <body>
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Mini Project The amount of dust in the air</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"></a>
-              </li>     
-          </div>
+            <img src="images/cmtc.png" alt="" class="pic1">
+            <img src="images/it.png" alt="" class="pic2">
+            <a class="navbar-brand" href="#">รายงานสถานการณ์ฝุ่นจิ๋วแผนกเทคโนโลยีสารสนเทศ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"></a>
+                    </li>
+            </div>
         </div>
-      </nav>
+    </nav>
 
 
-        <div class="breadcrumbs">
-            <div class="col-sm-4">
-                <div class="page-header float-left">
-                    <div class="page-title">
-                        <h1>Dashboard</h1>
-                    </div>
+
+
+    </div>
+
+    <section class="content mt-3">
+
+        <div class="col-md-6 col-lg-3">
+            <div class="card bg-flat-color-1 text-light">
+                <div class="card-body">
+                    <div>PM 1.0</div>
+                    <div class="h4 m-0 pm1"></div>
+
+                    <div class="progress-bar bg-light mt-2 mb-2" role="progressbar" style="width: 20%; height: 5px;"
+                        aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                    <small class="text-light">ฝุ่นละอองจิ๋ว</small>
                 </div>
             </div>
-            
         </div>
-           
+
+        <div class="col-md-6 col-lg-3">
+            <div class="card bg-flat-color-3 text-light">
+                <div class="card-body">
+                    <div>PM 2.5</div>
+                    <div class="h4 m-0 pm25"></div>
+
+                    <div class="progress-bar bg-light mt-2 mb-2" role="progressbar" style="width: 20%; height: 5px;"
+                        aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                    <small class="text-light">ฝุ่นละอองขนาดเล็ก</small>
+                </div>
+            </div>
         </div>
-        <div class="location"></div>
-        <div class="content mt-3">
 
-            <div class="col-md-6 col-lg-3">
-                <div class="card bg-flat-color-1 text-light">
-                    <div class="card-body">
-                        <div>PM 1.0</div>
-                        <div class="h4 m-0 pm1"></div>
-                        
-                        <div class="progress-bar bg-light mt-2 mb-2" role="progressbar" style="width: 20%; height: 5px;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                        <small class="text-light">Lorem ipsum dolor sit amet enim.</small>
-                    </div>
+        <div class="col-md-6 col-lg-3">
+            <div class="card bg-flat-color-2 text-light">
+                <div class="card-body">
+                    <div>PM 10</div>
+                    <div class="h4 m-0 pm10"></div>
+
+                    <div class="progress-bar bg-light mt-2 mb-2" role="progressbar" style="width: 20%; height: 5px;"
+                        aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                    <small class="text-light">ฝุ่นละอองขนาดใหญ่</small>
                 </div>
             </div>
+        </div>
 
-            <div class="col-md-6 col-lg-3">
-                <div class="card bg-flat-color-3 text-light">
-                    <div class="card-body">
-                        <div>PM 2.5</div>
-                        <div class="h4 m-0 pm25"></div>
-                        
-                        <div class="progress-bar bg-light mt-2 mb-2" role="progressbar" style="width: 20%; height: 5px;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                        <small class="text-light">Lorem ipsum dolor sit amet enim.</small>
-                    </div>
+        <div class="col-md-6 col-lg-3">
+            <div class="card bg-flat-color-2 text-light">
+                <div class="card-body">
+                    <div>Last_Reading</div>
+                    <div class="h4 m-0 last_Reading"></div>
+
+                    <div class="progress-bar bg-light mt-2 mb-2" role="progressbar" style="width: 20%; height: 5px;"
+                        aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                    <small class="text-light">ว/ด/ป ล่าสุดที่ทำการอ่านค่าฝุ่นละออง</small>
                 </div>
             </div>
+        </div>
 
-            <div class="col-md-6 col-lg-3">
-                <div class="card bg-flat-color-2 text-light">
-                    <div class="card-body">
-                        <div>PM 10</div>
-                        <div class="h4 m-0 pm10"></div>
-                        
-                        <div class="progress-bar bg-light mt-2 mb-2" role="progressbar" style="width: 20%; height: 5px;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                        <small class="text-light">Lorem ipsum dolor sit amet enim.</small>
-                    </div>
+        <div class="col-md-6 col-lg-3">
+            <div class="card bg-flat-color-2 text-light">
+                <div class="card-body">
+                    <div>temp</div>
+                    <div class="h4 m-0 temp"></div>
+
+                    <div class="progress-bar bg-light mt-2 mb-2" role="progressbar" style="width: 20%; height: 5px;"
+                        aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                    <small class="text-light">อุณภูมิ</small>
                 </div>
             </div>
+        </div>
 
-            <div class="col-md-6 col-lg-3">
-                <div class="card bg-flat-color-2 text-light">
-                    <div class="card-body">
-                        <div>last_Reading</div>
-                        <div class="h4 m-0 last_Reading"></div>
-                        
-                        <div class="progress-bar bg-light mt-2 mb-2" role="progressbar" style="width: 20%; height: 5px;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                        <small class="text-light">Lorem ipsum dolor sit amet enim.</small>
-                    </div>
+        <div class="col-md-6 col-lg-3">
+            <div class="card bg-flat-color-2 text-light">
+                <div class="card-body">
+                    <div>HUMI</div>
+                    <div class="h4 m-0 humi"></div>
+
+                    <div class="progress-bar bg-light mt-2 mb-2" role="progressbar" style="width: 20%; height: 5px;"
+                        aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                    <small class="text-light">ความชื้น</small>
                 </div>
             </div>
+        </div>
 
-            <div class="col-md-6 col-lg-3">
-                <div class="card bg-flat-color-2 text-light">
-                    <div class="card-body">
-                        <div class="h4 m-0 temp"></div>
-                        <div>temp</div>
-                        <div class="progress-bar bg-light mt-2 mb-2" role="progressbar" style="width: 20%; height: 5px;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                        <small class="text-light">Lorem ipsum dolor sit amet enim.</small>
-                    </div>
+        <div class="col-md-6 col-lg-3">
+            <div class="card bg-flat-color-2 text-light">
+                <div class="card-body">
+                    <div>LOCATION</div>
+                    <div class="h4 m-0 location1"></div>
+
+                    <div class="progress-bar bg-light mt-2 mb-2" role="progressbar" style="width: 20%; height: 5px;"
+                        aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                    <small class="text-light">สถานที่ติดตั้งเครื่องกรอง</small>
                 </div>
             </div>
-
-            <div class="col-md-6 col-lg-3">
-                <div class="card bg-flat-color-2 text-light">
-                    <div class="card-body">
-                        <div class="h4 m-0 humi"></div>
-                        <div>HUMI</div>
-                        <div class="progress-bar bg-light mt-2 mb-2" role="progressbar" style="width: 20%; height: 5px;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                        <small class="text-light">Lorem ipsum dolor sit amet enim.</small>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-3">
-                <div class="card bg-flat-color-2 text-light">
-                    <div class="card-body">
-                        <div class="h4 m-0 location1"></div>
-                        <div>LOCATION</div>
-                        <div class="progress-bar bg-light mt-2 mb-2" role="progressbar" style="width: 20%; height: 5px;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                        <small class="text-light">Lorem ipsum dolor sit amet enim.</small>
-                    </div>
-                </div>
-            </div>
-
-            
+        </div>
 
 
 
-            
 
-            
-<!-- 
-            <div class="col-sm-6 col-lg-3">
-                <div class="card text-white bg-flat-color-1">
-                    <div class="card-body pb-0">
-                        <div class="dropdown float-right">
-                            <button class="btn bg-transparent dropdown-toggle theme-toggle text-light" type="button" id="dropdownMenuButton1" data-toggle="dropdown">
-                                <i class="fa fa-cog"></i>
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <div class="dropdown-menu-content">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                            </div>
-                        </div>
-                        <h4 class="mb-0">
-                            <span class="count">100</span>
-                        </h4>
-                        <p class="text-light">PM2.5</p>
-
-                       
-                        <div class="chart-wrapper px-0" style="height:100px;" height="70">
-                            <canvas id="widgetChart1"></canvas>
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-            
-
-            <div class="col-sm-6 col-lg-3">
-                <div class="card text-white bg-flat-color-2">
-                    <div class="card-body pb-0">
-                        <div class="dropdown float-right">
-                            <button class="btn bg-transparent dropdown-toggle theme-toggle text-light" type="button" id="dropdownMenuButton2" data-toggle="dropdown">
-                                <i class="fa fa-cog"></i>
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                                <div class="dropdown-menu-content">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                            </div>
-                        </div>
-                        <h4 class="mb-0">
-                            <span class="count">100</span>
-                        </h4>
-                        <p class="text-light">PM 1</p>
-
-                        <div class="chart-wrapper px-0" style="height:100px;" height="70">
-                            <canvas id="widgetChart2"></canvas>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            
-
-            <div class="col-sm-6 col-lg-3">
-                <div class="card text-white bg-flat-color-3">
-                    <div class="card-body pb-0">
-                        <div class="dropdown float-right">
-                            <button class="btn bg-transparent dropdown-toggle theme-toggle text-light" type="button" id="dropdownMenuButton3" data-toggle="dropdown">
-                                <i class="fa fa-cog"></i>
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
-                                <div class="dropdown-menu-content">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                            </div>
-                        </div>
-                        <h4 class="mb-0">
-                            <span class="count">100</span>
-                        </h4>
-                        <p class="text-light">PM 10</p>
-
-                    </div>
-
-                    <div class="chart-wrapper px-0" style="height:100px;" height="70">
-                        <canvas id="widgetChart3"></canvas>
-                    </div>
-                </div>
-            </div> -->
-            
-
-                   
-                                </div>
-                            </div>
-                        
-                       
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <!--/.col-->
-
-          
-
-            <!-- <div class="col-xl-6">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <h4 class="card-title mb-0">Report Dust Charge Hour/Daily</h4>
-                                <div class="small text-muted">January 2022</div>
-                            </div>
-                           
+        </div>
+        </div>
 
 
-                        </div>
-                        
-                        <div class="chart-wrapper mt-4">
-                            <canvas id="trafficChart" style="height:200px;" height="200"></canvas>
-                        </div>
+        </div>
 
-                    </div>
-                    <div class="card-footer">
-                        <ul>
-                            <li>
-                                <div class="text-muted">PM 2.5</div>
-                                <strong>  AQI (คุณภาพอากาศดี)</strong>
-                                <div class="progress progress-xs mt-2" style="height: 5px;">
-                                    <div class="progress-bar bg-success" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </li>
-                            <li class="hidden-sm-down">
-                                <div class="text-muted">PM 1</div>
-                                <strong>    AQI(คุณภาพอากาศดี)</strong>
-                                <div class="progress progress-xs mt-2" style="height: 5px;">
-                                    <div class="progress-bar bg-info" role="progressbar" style="width: 20%;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="text-muted">PM 10</div>
-                                <strong>AQI (คุณภาพอากาศดี))</strong>
-                                <div class="progress progress-xs mt-2" style="height: 5px;">
-                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div> -->
+        </div>
+        </div>
+    </section>
 
 
 
-            
 
-            
-<div class="boxi">
+
+    <section>
+        <div class="boxi">
             <div class="col-xl-3 col-lg-6">
                 <div class="card">
                     <div class="card-body">
@@ -363,49 +223,104 @@
             </div>
 
             <div class="col-xl-3 col-lg-6">
-            
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
-    <footer class="fter"> <img src="images/banner.gif" alt="banner" class="responsive".responsive{
-        width: 1000%
-        height: 1000%
-        }  >
-     </footer>  
-    <script src="vendors/jquery/dist/jquery.min.js"></script>
-    <script src="vendors/popper.js/dist/umd/popper.min.js"></script>
-    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="assets/js/main.js"></script>
+        </div>
+        </div>
+        </div>
+
+    </section>
+    <section class="airline"> </section>
+    <section>
+
+        <footer class="footer-new">
+            <div class="item">
+                <div class="icon">
+                    <a href="https://www.facebook.com/itcmtc"><i class="fab fa-facebook"></i></a>
+                    <a href="http://it.cmtc.ac.th/"><i class="fas fa-globe-asia"></i></a>
+                    <a href="https://www.google.com/maps/@18.7931026,98.9838256,3a,75y,164.47h,87.48t/data=!3m6!1e1!3m4!1sFVFcOUoGDEgjikjr_uqT6A!2e0!7i16384!8i8192"><i class="fas fa-map-marker-alt"></i></a>
+                </div>
+                <div class="ft-text">
+                    <h1>Chiang Mai Technical College, Chiang Mai</h1>
+                    <h1>Information technology</h1>
+                    <p>&copy Chiang Mai Technical College, 2022 </p>
+                </div>
+            </div>
+            </div>
+            <!-- //////////////////////////////////////////////////////////////// -->
+            <div class="teacher">
+                <h1>ADVISOR</h1>
+
+                <div class="teacher-box">
+                    <div class="niyom">
+                        <h1>Mr. Niyom Chintrakul</h1>
+                    </div>
+
+                    <div class="tharit">
+                        <h1>Mr. Tharit Chaimongkol </h1>
+                    </div>
+
+                    <div class="kwan">
+                        <h1>Ms. Khwandarin Jitharn</h1>
+                    </div>
+                </div>
+
+            <!-- //////////////////////////////////////////////////////////////// -->
+            <div class="item2">
+                <h1>INVENTOR</h1>
+
+                <div class="name-box">
+                    <div class="nook">
+                        <h1>Mr. Thanon Hansoradej</h1>
+                        <h2>Email: nookthanon8588@gmail.com</h2>
+                        <h2>Facebook: Nook Thanon</h2>
+                        <h2>Line: 0946298588</h2>
+                        <h2>Phone number: 0946298588</h2>
+                    </div>
+
+                    <div class="bright">
+                        <h1>Mr. Anuwin Guna</h1>
+                        <h2>Email: anuwin.guna@gmail.com</h2>
+                        <h2>Facebook: Bite Anuwin</h2>
+                        <h2>Line: 0806771694</h2>
+                        <h2>Phone number: 0622951271</h2>
+                    </div>
+
+                    <div class="riw">
+                        <h1>Mr. Songkran Yuyong</h1>
+                        <h2>Email: rewkung_103@hotmail.com</h2>
+                        <h2>Facebook: Songkran Yuyong</h2>
+                        <h2>Line: 0963603561</h2>
+                        <h2>Phone number: 0963603561</h2>
+                    </div>
+
+                    <div class="tae">
+                        <h1>Mr. Surapol Somna</h1>
+                        <h2>Email: gare007890@gmail.com</h2>
+                        <h2>Facebook: Tae Grim</h2>
+                        <h2>Line: 0936844570</h2>
+                        <h2>Phone number: 0936844570</h2>
+                    </div>
+                </div>
+                <div class="cpr">
+                    <p>&copy Information technology, 2022 </p>
+                </div>
+            </div>
 
 
-    <script src="vendors/chart.js/dist/Chart.bundle.min.js"></script>
-    <script src="assets/js/dashboard.js"></script>
-    <script src="assets/js/widgets.js"></script>
-    <script src="vendors/jqvmap/dist/jquery.vmap.min.js"></script>
-    <script src="vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
-    <script src="vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
-    <script>
-        (function($) {
-            "use strict";
 
-            jQuery('#vmap').vectorMap({
-                map: 'world_en',
-                backgroundColor: null,
-                color: '#ffffff',
-                hoverOpacity: 0.7,
-                selectedColor: '#1de9b6',
-                enableZoom: true,
-                showTooltip: true,
-                values: sample_data,
-                scaleColors: ['#1de9b6', '#03a9f5'],
-                normalizeFunction: 'polynomial'
-            });
-        })(jQuery);
-    </script>
-<script src="js/main.js" type="text/javascript"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        </footer>
+
+    </section>
+
+
+
+
+
+    <script src="js/main.js" type="text/javascript"></script>
+    
+
 </body>
+
 </html>
